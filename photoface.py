@@ -125,6 +125,7 @@ class View(Gtk.DrawingArea):
         Gtk.DrawingArea.__init__(self)
 
         self.status = Status()
+
         self._color = fill_color
         self.status.left_eye = left_eye
         self.status.right_eye = right_eye

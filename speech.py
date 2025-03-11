@@ -184,7 +184,7 @@ class Speech(GstSpeechPlayer):
         src.props.rate = rate
         src.props.voice = status.voice.name
         src.props.track = 1
-        src.props.text = text
+        src.props.text = str(get_speech().gst_message_cb)
 
         self.restart_sound_device()
 

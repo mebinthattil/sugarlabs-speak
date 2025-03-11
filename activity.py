@@ -112,14 +112,10 @@ EYE_DICT = {
                    'index': 6},
 }
 DELAY_BEFORE_SPEAKING = 1500  # milleseconds
-IDLE_DELAY = 120000  # milleseconds
-IDLE_PHRASES = ['zzzzzzzzz', _('I am bored.'), _('Talk to me.'),
-                _('I am sleepy.'), _('Are you still there?'),
-                _('Please type something.'),
-                _('Do you have anything to say to me?'), _('Hello?'), _('Anyone there?'),
-                _('I\'m waiting here.') ]
-SIDEWAYS_PHRASES = [_('Whoa! Sideways!'), _("I'm on my side."), _('Uh oh.'),
-                    _('Wheeeee!'), _('Hey! Put me down!'), _('Falling over!'), _('Ahhh, Why am I tilted?')
+IDLE_DELAY = 20000  # milleseconds
+IDLE_PHRASES = ['zzzzzzzzz', _('If this works, that would be great')]
+SIDEWAYS_PHRASES = [ _('Whoa! Sideways!'), _("I'm on my side."), _('Uh oh.'),
+                    _('Wheeeee!'), _('Hey! Put me down!'), _('Falling over!'), _('Ahhh, Why am I tilted?'),
                     _('Oops! That felt weird.'), _('Help! I\'m not upright!') ]
 SLASH = '-x-SLASH-x-'  # slash safe encoding
 
@@ -170,11 +166,6 @@ def _is_tablet_mode():
 
 class SpeakActivity(activity.Activity):
     def __init__(self, handle):
-        """  Initializes the SpeakActivity. 
-        This constructor sets up the SpeakActivity, taking a handle as an argument. 
-        It performs necessary initialization tasks, such as setting up the user interface, 
-        initializing components & layouts. """
-
         super(SpeakActivity, self).__init__(handle)
 
         self._notebook = Gtk.Notebook()
@@ -336,7 +327,7 @@ class SpeakActivity(activity.Activity):
             # we are creating the activity
             self.connect('shared', self._shared_cb)
 
-    def _toolbar_expanded(self):
+    def _toolbar_expanded(self) -> bool:
         if self._activity_button.is_expanded():
             return True
         if self._voice_button.is_expanded():
@@ -971,9 +962,15 @@ class SpeakActivity(activity.Activity):
         if text:
             self.face.look_ahead()
 
+
+                # MAIN LOGIC
+            def testing_response(msg):
+                return len(msg)%2==0
+
+
             # speak the text
             if self._mode == MODE_BOT:
-                self.face.say(brain.respond(text))
+                self.face.say(testing_response(text))
             else:
                 self.face.say(text)
 
