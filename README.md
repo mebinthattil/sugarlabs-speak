@@ -13,7 +13,7 @@ Speak is part of the Sugar desktop and is often included.  Please refer to;
 * [Try Online](https://try.sugarizer.org/),
 * [Experience Sugar](https://www.sugarlabs.org/#try),
 * [How to use Sugar](https://help.sugarlabs.org/),
-* [Download Speak using Browse](https://activities.sugarlabs.org/), search for `Speak`, then download,
+* [Download Speak using Browse](https://v4.activities.sugarlabs.org/app/vu.lux.olpc.Speak.html), then download,
 * [How to use Speak](https://help.sugarlabs.org/en/speak.html).
 * [Sugar Labs Wiki](https://wiki.sugarlabs.org/go/Welcome_to_the_Sugar_Labs_wiki)
 
