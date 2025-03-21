@@ -22,7 +22,7 @@ How to upgrade?
     
 On Sugar desktop systems;
 * use [My Settings](https://help.sugarlabs.org/en/my_settings.html), [Software Update](https://help.sugarlabs.org/en/my_settings.html#software-update), or;
-* use Browse to open [https://v4.activities.sugarlabs.org/app/vu.lux.olpc.Speak.html](https://activities.sugarlabs.org/),then download.
+* use Browse to open [https://v4.activities.sugarlabs.org/app/vu.lux.olpc.Speak.html](https://v4.activities.sugarlabs.org/app/vu.lux.olpc.Speak.html),then download.
 
 How to integrate?
 =================
